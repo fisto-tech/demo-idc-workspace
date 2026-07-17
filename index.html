@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fisto Tech IDC Webpage</title>
+  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="icon" href="./assets/images/fisto-logo.png" type="image/png">
+  <style>
+    #fisto-preloader { position: fixed; inset: 0; z-index: 99999; background: #fff; }
+    body.is-loading { overflow: hidden; }
+    body.is-loading .container { opacity: 0; visibility: hidden; }
+  </style>
+</head>
+<body>
+
+  <div id="fisto-preloader" class="fisto-preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader-inner">
+      <img
+        class="preloader-logo"
+        src="assets/images/fisto-logo.png"
+        alt="FIST-O Tech"
+        width="280"
+        height="120"
+      />
+      <div class="preloader-bar-track" aria-hidden="true">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <span class="preloader-percent" aria-hidden="true">00%</span>
+    </div>
+    <span class="preloader-sr">0% loaded</span>
+  </div>
+   <script>
+    try {
+      if (sessionStorage.getItem("fisto-idc-preloader-done") === "1") {
+        document.body.classList.remove("is-loading");
+        document.getElementById("fisto-preloader")?.remove();
+      }
+    } catch (e) {}
+  </script>
+
+  <section class="hero-section" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Transform your products <br>
+         into stunning <br> <span class="text-gold">Interactive Digital Catalogues</span> 
+      </h1>
+      <p class="hero-subtitle">Engage your customers with immersive 3D, AR, and interactive media experiences.</p>
+      <button class="explore-btn" onclick="document.querySelector('.container').scrollIntoView({behavior: 'smooth'})">EXPLORE DEMOS</button>
+    </div>
+  </section>
+
+  <div class="container">
+    
+    <aside class="bookshelf-section">
+      <div class="bookshelf-header">
+        <h1>Our Digital Catalogue Demos</h1>
+        <!-- <p>Explore our Interactive Digital Catalogues by category.</p> -->
+      </div>
+
+      <div class="shelves-scroll-container">
+        <div class="shelf-category">
+          <h2>Packaging Solutions</h2>
+          <div class="book-row">
+            <a href="https://terratechpacks.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Terra Tech Packs"><img src="assets/images/idc-demos/food-container-idc/1-terratech-idc.webp" alt="Terratech IDC book"></a>
+            <a href="https://www.4mpacks.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="4M Packs"><img src="assets/images/idc-demos/food-container-idc/2-4mpacks-idc.webp" alt="4M Packs IDC book"></a>
+            <a href="https://www.rkpoly.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="RK Poly"><img src="assets/images/idc-demos/food-container-idc/3-rkpoly-idc.webp" alt="RK Poly IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+
+        <div class="shelf-category">
+          <div class="book-row">
+            <a href="https://imlcatalogue.adecoenergy.in/" target="_blank" class="book-cover" data-tooltip="Eco Energy"><img src="assets/images/idc-demos/food-container-idc/4-ecoenergy-idc.webp" alt="Eco Energy IDC book"></a>
+             <a href="https://www.smartpolypackaging.co.in/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Smart Poly"><img src="assets/images/idc-demos/poly-bag-idc/11-smartpoly-idc.webp" alt="Smart Poly IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+
+        <div class="shelf-category">
+          <h2>Drinking Water Solutions</h2>
+          <div class="book-row">
+            <a href="https://www.popularwater.in/DigitalCatalogue/index.html" target="_blank" class="book-cover" data-tooltip="Popular Water"><img src="assets/images/idc-demos/water-bottle-idc/5-popularwater-idc.webp" alt="Popular Water IDC book"></a>
+            <a href="https://oodabond.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Ooda Bond"><img src="assets/images/idc-demos/water-bottle-idc/6-oodabond-idc.webp" alt="Oodabond IDC book"></a>
+            <a href="https://www.conwaywater.com/IR_Sensor_Operated_Water_Dispensers/" target="_blank" class="book-cover" data-tooltip="Conway"><img src="assets/images/idc-demos/water-bottle-idc/7-conway-idc.webp" alt="Conway IDC book"></a>
+            <!-- <a href="#" target="_blank" class="book-cover" data-tooltip="Black IDC"><img src="assets/images/idc-demos/water-bottle-idc/8-black-idc.webp" alt="Black IDC book"></a> -->
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+
+        <div class="shelf-category shelf-category-compact">
+          <h2>Manufacturing industry</h2>
+          <div class="book-row">
+            <a href="https://airlockintl.co.in/DigitalCatalogue/DCSR/index.html" target="_blank" class="book-cover" data-tooltip="Airlock"><img src="assets/images/idc-demos/pumps-idc/12-airlockDCSR-idc.webp" alt="Airlock DCSR IDC book"></a>
+            <a href="https://airlockintl.co.in/DigitalCatalogue/DTD/index.html" target="_blank" class="book-cover" data-tooltip="Airlock"><img src="assets/images/idc-demos/machinery-idc/9-airlockDTD-idc.webp" alt="Airlock DTD IDC book"></a>
+            <a href="https://www.bestomech.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Bestomech"><img src="assets/images/idc-demos/machinery-idc/10-bestomech-idc.webp" alt="Bestomech IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+
+        <!-- <div class="shelf-category shelf-category-compact">
+          <h2>Poly Bag IDC</h2>
+          <div class="book-row">
+            <a href="https://www.smartpolypackaging.co.in/DigitalCatalogue/" target="_blank" class="book-cover"><img src="assets/images/idc-demos/poly-bag-idc/11-smartpoly-idc.webp" alt="Smart Poly IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div> -->
+
+        <div class="shelf-category">
+          <h2>Agriculture Solutions</h2>
+          <div class="book-row">
+            <a href="https://akiracontrols.in/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Akira Controls"><img src="assets/images/idc-demos/pumps-idc/akira-idc.webp" alt="Akira IDC book"></a>
+            <a href="https://niagaradigitalcatalogue.s3.ap-south-1.amazonaws.com/index.html" target="_blank" class="book-cover" data-tooltip="Niagara"><img src="assets/images/idc-demos/pumps-idc/13-niagara-idc.webp" alt="Niagara IDC book"></a>
+            <a href="https://vengopump.com/DigitalCatalogue/" target="_blank" class="book-cover" data-tooltip="Vengo Pumps"><img src="assets/images/idc-demos/pumps-idc/14-vengopumps-idc.webp" alt="Vengo Pumps IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+
+        <div class="shelf-category shelf-category-compact">
+          <h2>More Industries</h2>
+          <div class="book-row">
+            <a href="https://fistoar.github.io/Salzer/" target="_blank" class="book-cover" data-tooltip="Salzer"><img src="assets/images/idc-demos/other-idc/15-salzar-idc.webp" alt="Salzar IDC book"></a>
+            <a href="https://akiracontrols.in/EVProtector/" target="_blank" class="book-cover" data-tooltip="Evolve"><img src="assets/images/idc-demos/other-idc/16-evolveEV-idc.webp" alt="Evolve EV IDC book"></a>
+            <a href="https://summits-idc.vercel.app/" target="_blank" class="book-cover" data-tooltip="Summits"><img src="assets/images/idc-demos/other-idc/summits-idc.webp" alt="Summits IDC book"></a>
+          </div>
+          <div class="wood-shelf" aria-hidden="true"></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content-section">
+      <header class="main-header">
+        <a class="logo" href="https://www.fist-o.com/" target="_blank">
+          <img src="assets/images/fisto-logo.png" alt="FIST-O Logo" style="max-height: 60px;">
+        </a>
+        <div class="header-title">
+          <h2>Features in <br> <span class="idc-highlight">Interactive Digital catalogue (IDC)</span></h2>
+          <!-- <p>Explore our Interactive Digital Catalogues by category.</p> -->
+        </div>
+        
+      </header>
+
+      <div class="showcase-container">
+        
+        <section class="interactive-preview-scrollable">
+          <div class="preview-text">
+            <h3 id="feature-title">Interactive Media Experience</h3>
+            <p id="feature-description">Bring your catalogue to life with rich multimedia content. Showcase products using images, videos, audio, and animations to create a more engaging and immersive customer experience.</p>
+          </div>
+
+          <div class="catalogue-mockup-frame">
+            <div class="catalogue-mockup" id="feature-visual-box">
+              <div class="mockup-page left-page">
+                <span class="hotspot-label label-audio">Audio</span>
+                <div class="page-content-box">
+                  <div class="audio-icon-sim">🔊</div>
+                  <p class="mockup-heading">BRING YOUR CATALOGUE <br><strong>TO LIFE</strong></p>
+                  <span class="hotspot-label label-images">Images</span>
+                </div>
+              </div>
+
+              <div class="mockup-page right-page">
+                <div class="page-content-box video-box">
+                  <div class="video-play-sim">▶</div>
+                  <span class="hotspot-label label-video">Video</span>
+                </div>
+                <span class="hotspot-label label-animation">Animation</span>
+              </div>
+            </div>
+          </div>
+          <div class="feature-image-frame">
+            <img id="feature-visual-image" class="feature-visual-image" src="assets/images/content-images/interactive-media-experience.webp" alt="Interactive Media Experience preview">
+            <div id="feature-custom-html" class="feature-custom-html"></div>
+            <div id="coming-soon-overlay" class="coming-soon-overlay" style="display: none;">
+              <span>Coming Soon</span>
+            </div>
+          </div>
+        </section>
+
+    <div class="navigation-wrapper">
+          <div class="autoplay-toggle-container">
+            <span class="autoplay-label">Auto-play</span>
+            <label class="switch">
+              <input type="checkbox" id="autoplay-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <nav class="feature-navigation">
+            <ul id="feature-menu">
+              <li class="active" data-feature="360-view" style="--i: 0;">360° Product Visualization</li>
+              <li data-feature="ar" style="--i: 1;">AR Experience with QR Code</li>
+              <li data-feature="multi-view" style="--i: 2;">Multi-View Product Experience (Explode , functions)</li>
+              <li data-feature="product-selection" style="--i: 3;">Product Selection & Interaction</li>
+              <li data-feature="linking-prod" style="--i: 4;">Product Feature Highlights</li>
+              <li data-feature="analytics" style="--i: 5;">Analytics & Tracking</li>
+              <li data-feature="lead-gen" style="--i: 6;">Lead Forms</li>
+              <li data-feature="buttons" style="--i: 7;">Interactive Buttons & Hotspots</li>
+              <li data-feature="media" style="--i: 8;">Images, Videos ,Gif & Audio Support</li>
+              <li data-feature="embed" style="--i: 9;">Map Embed & Location Integration</li>
+              <li data-feature="gallery" style="--i: 10;">Library & Gallery Experience</li>
+              <li data-feature="social-sharing" style="--i: 11;">One-Tap Social Sharing</li>
+              <li data-feature="flip" style="--i: 12;">Page Flip Effects & Viewing Experience</li>
+              <li data-feature="fingertips" style="--i: 13;">Multi-Functional Layouts</li>
+              <li data-feature="background" style="--i: 14;">Background Customization ( Colors, Themes & Videos,images )</li>
+              <li data-feature="smart-nav" style="--i: 15;">Smart Navigation</li>
+              <li data-feature="website-embed" style="--i: 16;">Website Embed Integration</li>
+              <li data-feature="mobile" style="--i: 17;">Cross-Device Compatibility</li>
+              <li data-feature="discovery" style="--i: 18;">Search & Filter Functionality</li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <audio src="./assets/images/content-images/images-videos-and-gifs/audio-file.mp3" id="bg-music"></audio>
+  
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script src="script.js?v=10"></script>
+</body>
+</html>
