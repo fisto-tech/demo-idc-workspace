@@ -38,11 +38,11 @@ footer {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 72dvh;
+  min-height: 58dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3.25rem 1rem;
+  padding: 0.25rem 1rem;
   background: #0b0b0b;
   color: #fff;
   overflow: hidden;
@@ -5003,7 +5003,7 @@ body:not(.is-loading) .container {
   position: relative;
   top: 0;
   width: 100vw;
-  min-height: 72dvh;
+  min-height: 58dvh;
   z-index: 1;
   background-color: #0b0b0b;
   display: flex;
