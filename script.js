@@ -1,5 +1,66 @@
 const imageBase = "assets/images/content-images";
 
+/* Preloader simulation: animate percent, progress bar, and fade out */
+(function initPreloader() {
+  const preloader = document.getElementById('fisto-preloader');
+  if (!preloader) return;
+
+  const percentEl = preloader.querySelector('.preloader-percent');
+  const barFill = preloader.querySelector('.preloader-bar-fill');
+  const barGlow = preloader.querySelector('.preloader-bar-glow');
+  let current = 0;
+
+  // if already done (sessionStorage set by previous visit) remove immediately
+  try {
+    if (sessionStorage.getItem('fisto-idc-preloader-done') === '1') {
+      preloader.remove();
+      return;
+    }
+  } catch (e) {}
+
+  const timer = setInterval(() => {
+    const increment = current > 80 ? Math.random() * 2 : Math.random() * 12 + 2;
+    current = Math.min(100, current + increment);
+    const rounded = Math.floor(current);
+    if (percentEl) percentEl.textContent = String(rounded).padStart(2, '0') + '%';
+    if (barFill) barFill.style.width = rounded + '%';
+    if (barGlow) barGlow.style.left = `calc(${rounded}% - 8px)`;
+
+    if (current >= 100) {
+      clearInterval(timer);
+      setTimeout(() => {
+        // fade out
+        preloader.classList.add('is-exiting');
+        setTimeout(() => {
+          try { sessionStorage.setItem('fisto-idc-preloader-done', '1'); } catch (e) {}
+          preloader.remove();
+        }, 800);
+      }, 400);
+    }
+  }, 100);
+
+  // safety: remove preloader after 12s in case something stalls
+  setTimeout(() => {
+    clearInterval(timer);
+    try { sessionStorage.setItem('fisto-idc-preloader-done', '1'); } catch (e) {}
+    if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+  }, 12000);
+})();
+
+const heroSection = document.querySelector('.hero-section');
+const contentContainer = document.querySelector('.container');
+
+if (heroSection && contentContainer) {
+  const updatePinnedState = () => {
+    const shouldPin = window.scrollY >= heroSection.offsetHeight;
+    contentContainer.classList.toggle('is-pinned', shouldPin);
+  };
+
+  updatePinnedState();
+  window.addEventListener('scroll', updatePinnedState, { passive: true });
+  window.addEventListener('resize', updatePinnedState);
+}
+
 const featureData = {
   media: {
     title: "Image, video , Gif & Audio Support",

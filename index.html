@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css?v=10">
   <link rel="icon" href="./assets/images/fisto-logo.png" type="image/png">
   <style>
-    #fisto-preloader { position: fixed; inset: 0; z-index: 99999; background: #fff; }
     body.is-loading { overflow: hidden; }
     body.is-loading .container { opacity: 0; visibility: hidden; }
   </style>
@@ -15,18 +14,23 @@
 <body>
 
   <div id="fisto-preloader" class="fisto-preloader" role="status" aria-live="polite" aria-label="Loading">
-    <div class="preloader-inner">
-      <img
-        class="preloader-logo"
-        src="assets/images/fisto-logo.png"
-        alt="FIST-O Tech"
-        width="280"
-        height="120"
-      />
-      <div class="preloader-bar-track" aria-hidden="true">
-        <div class="preloader-bar-fill"></div>
+    <div class="preloader-shell">
+      <div class="preloader-visual" aria-hidden="true">
+        <div class="preloader-ring preloader-ring-outer"></div>
+        <div class="preloader-ring preloader-ring-middle"></div>
+        <div class="preloader-ring preloader-ring-inner"></div>
+        <!-- <div class="preloader-glow"></div> -->
+        <div class="preloader-percent">00%</div>
       </div>
-      <span class="preloader-percent" aria-hidden="true">00%</span>
+
+      <div class="preloader-brand">
+        <h2>Loading<span class="preloader-dots">...</span></h2>
+      </div>
+
+      <div class="preloader-bar-track" aria-hidden="true">
+        <!-- <div class="preloader-bar-fill"></div>
+        <div class="preloader-bar-glow"></div> -->
+      </div>
     </div>
     <span class="preloader-sr">0% loaded</span>
   </div>
