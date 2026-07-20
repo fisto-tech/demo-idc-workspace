@@ -5054,7 +5054,7 @@ body:not(.is-loading) .container {
   font-family: 'Poppins', sans-serif;
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   color: #999;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-weight: 300;
 }
 
