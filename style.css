@@ -652,7 +652,8 @@ footer {
   min-width: 0;
   gap: 0vw;
   z-index: 2;
-  scale: 0.9;
+  transform: scaleY(0.95);
+  transform-origin: center top;
 }
 
 /* Curve is handled by .navigation-wrapper::before */
