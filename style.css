@@ -657,7 +657,7 @@ footer {
 /* Curve is handled by .navigation-wrapper::before */
 .interactive-preview-scrollable::after {
   display: none;
-  scale: 0.9;
+  scale: 0.5;
 }
 
 .preview-text {
