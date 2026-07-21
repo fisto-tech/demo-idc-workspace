@@ -5081,4 +5081,5 @@ body:not(.is-loading) .container {
 .container {
   position: relative;
   z-index: 2;
+  transform: scaleY(0.9);
 }
