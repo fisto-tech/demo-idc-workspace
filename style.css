@@ -645,7 +645,7 @@ footer {
     linear-gradient(118deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.72) 20%, transparent 20%),
     linear-gradient(63deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.42) 11%, transparent 11%),
     radial-gradient(ellipse 120% 115% at 38% 50%, rgba(255, 255, 255, 0.82) 0%, rgba(250, 252, 252, 0.84) 58%, rgba(226, 232, 232, 0.78) 100%);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   position: relative;
